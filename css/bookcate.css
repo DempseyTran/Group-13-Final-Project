@@ -20,7 +20,7 @@ html {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  background: url(./imgbookctg/heading-bg.webp) no-repeat;
+  background: url(/images/heading-bg.webp) no-repeat;
   background-size: cover;
   background-position: center;
   text-align: center;
