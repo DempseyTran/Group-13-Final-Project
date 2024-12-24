@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+   <link rel="stylesheet" href="css/Home.css">
+   <script type="module" src="js/script.js"></script>
+</head>
+
+<body>
+   <header class="header">
+
+      <div class="header-1">
+         <div class="flex">
+            <div class="share">
+               <a href="#" class="fab fa-facebook-f"></a>
+               <a href="#" class="fab fa-twitter"></a>
+               <a href="#" class="fab fa-instagram"></a>
+               <a href="#" class="fab fa-linkedin"></a>
+            </div>
+            <p> new <a href="login.html">login</a> | <a href="register.html">register</a> </p>
+         </div>
+      </div>
+
+      <div class="header-2">
+         <div class="flex" id="header-2-container">
+            <a href="home.html" class="logo">Bookly.</a>
+
+            <nav class="navbar">
+               <a href="home.html">home</a>
+               <a href="about.html">about</a>
+               <a href="shop.html">shop</a>
+               <a href="contact.html">contact</a>
+               <a href="orders.html">orders</a>
+            </nav>
+
+            <div class="icons">
+               <div class="icons-container flex">
+
+                  <!-- Toggle menu icon responsive -->
+                  <div id="menu-btn" class="hovericon fas fa-bars"></div>
+                  <a href="search_page.html" class="hovericon fas fa-search"></a>
+
+                  <!-- Toggle-down -->
+                  <div id="user-btn" class="hovericon fas fa-user"></div>
+
+                  <a href="cart.html"> <i class="hovericon fas fa-shopping-cart"></i> <span></span> </a>
+                  <p class="hovericon ">(0)</p>
+               </div>
+            </div>
+
+            <!-- Toggle user-box active when #user-btn buttoned -->
+            <div class="user-box">
+               <p>username : <span>user02</span></p>
+               <p>email : <span>user02</span></p>
+               <a href="logout.php" class="delete-btn">logout</a>
+            </div>
+
+         </div>
+      </div>
+
+   </header>
+
+   <body>
+      <!-- Home -->
+      <section class="home">
+
+         <div class="content">
+            <h3>Hand Picked Book to your door.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quod? Reiciendis ut porro iste totam.
+            </p>
+            <a href="about.html" class="white-btn">discover more</a>
+         </div>
+
+      </section>
+
+      <section class="products">
+
+         <h1 class="title">latest products</h1>
+
+         <!-- Shops -->
+         <div class="box-container">
+
+            <form action="" method="post" class="box">
+               <img class="image" src="images/bash_and_lucy-2.jpg" alt="">
+               <div class="name"></div>
+               <div class="price">$20</div>
+               <input type="number" min="1" name="product_quantity" value="1" class="qty">
+               <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+            </form>
+            <form action="" method="post" class="box">
+               <img class="image" src="images/be_well_bee.jpg" alt="">
+               <div class="name"></div>
+               <div class="price">$18</div>
+               <input type="number" min="1" name="product_quantity" value="1" class="qty">
+               <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+            </form>
+            <form action="" method="post" class="box">
+               <img class="image" src="images/boring_girls_a_novel.jpg" alt="">
+               <div class="name"></div>
+               <div class="price">$21</div>
+               <input type="number" min="1" name="product_quantity" value="1" class="qty">
+               <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+            </form>
+            <form action="" method="post" class="box">
+               <img class="image" src="images/clever_lands.jpg" alt="">
+               <div class="name"></div>
+               <div class="price">$15</div>
+               <input type="number" min="1" name="product_quantity" value="1" class="qty">
+               <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+            </form>
+            <form action="" method="post" class="box">
+               <img class="image" src="images/darknet.jpg" alt="">
+               <div class="name"></div>
+               <div class="price">$20</div>
+               <input type="number" min="1" name="product_quantity" value="1" class="qty">
+               <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+            </form>
+            <form action="" method="post" class="box">
+               <img class="image" src="images/economic.jpg" alt="">
+               <div class="name"></div>
+               <div class="price">$11</div>
+               <input type="number" min="1" name="product_quantity" value="1" class="qty">
+               <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+            </form>
+            <form action="" method="post" class="box">
+               <img class="image" src="images/freefall.jpg" alt="">
+               <div class="name"></div>
+               <div class="price">$11</div>
+               <input type="number" min="1" name="product_quantity" value="1" class="qty">
+               <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+            </form>
+            <form action="" method="post" class="box">
+               <img class="image" src="images/holy_ghosts.jpg" alt="">
+               <div class="name"></div>
+               <div class="price">$16</div>
+               <input type="number" min="1" name="product_quantity" value="1" class="qty">
+               <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+            </form>
+            <form action="" method="post" class="box">
+               <img class="image" src="images/history_of_modern_architecture.jpg" alt="">
+               <div class="name"></div>
+               <div class="price">$15</div>
+               <input type="number" min="1" name="product_quantity" value="1" class="qty">
+               <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+            </form>
+            <form action="" method="post" class="box">
+               <img class="image" src="images/radical_gardening.jpg" alt="">
+               <div class="name"></div>
+               <div class="price">$21</div>
+               <input type="number" min="1" name="product_quantity" value="1" class="qty">
+               <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+            </form>
+            <form action="" method="post" class="box">
+               <img class="image" src="images/red_queen.jpg" alt="">
+               <div class="name"></div>
+               <div class="price">$26</div>
+               <input type="number" min="1" name="product_quantity" value="1" class="qty">
+               <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+            </form>
+            <form action="" method="post" class="box">
+               <img class="image" src="images/shattered.jpg" alt="">
+               <div class="name"></div>
+               <div class="price">$17</div>
+               <input type="number" min="1" name="product_quantity" value="1" class="qty">
+               <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+            </form>
+            <form action="" method="post" class="box">
+               <img class="image" src="images/the_girl_of_ink_and_stars.jpg" alt="">
+               <div class="name"></div>
+               <div class="price">$11</div>
+               <input type="number" min="1" name="product_quantity" value="1" class="qty">
+               <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+            </form>
+            <form action="" method="post" class="box">
+               <img class="image" src="images/the_happy_lemon.jpg" alt="">
+               <div class="name"></div>
+               <div class="price">$20</div>
+               <input type="number" min="1" name="product_quantity" value="1" class="qty">
+               <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+            </form>
+            <form action="" method="post" class="box">
+               <img class="image" src="images/the_world.jpg" alt="">
+               <div class="name"></div>
+               <div class="price">$9</div>
+               <input type="number" min="1" name="product_quantity" value="1" class="qty">
+               <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+            </form>
+         </div>
+
+         <div class="load-more" style="margin-top: 2rem; text-align:center">
+            <a href="shop.html" class="option-btn">load more</a>
+         </div>
+
+      </section>
+
+      <!-- About Section -->
+      <section class="about">
+
+         <div class="flex">
+
+            <div class="image">
+               <img src="images/about-img.jpg" alt="">
+            </div>
+
+            <div class="content">
+               <h3>about us</h3>
+               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quos enim minima ipsa dicta officia
+                  corporis ratione saepe sed adipisci?</p>
+               <a href="about.html" class="btn">read more</a>
+            </div>
+
+         </div>
+
+      </section>
+
+      <!-- Contact Us -->
+      <section class="home-contact">
+
+         <div class="content">
+            <h3>have any questions?</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque cumque exercitationem repellendus, amet
+               ullam voluptatibus?</p>
+            <a href="contact.html" class="white-btn">contact us</a>
+         </div>
+
+      </section>
+
+      <!-- Footer -->
+      <section class="footer">
+
+         <div class="box-container">
+
+            <div class="box">
+               <h3>quick links</h3>
+               <a href="home.html">home</a>
+               <a href="about.html">about</a>
+               <a href="shop.html">shop</a>
+               <a href="contact.html">contact</a>
+            </div>
+
+            <div class="box">
+               <h3>extra links</h3>
+               <a href="login.html">login</a>
+               <a href="register.html">register</a>
+               <a href="cart.html">cart</a>
+               <a href="orders.html">orders</a>
+            </div>
+
+            <div class="box">
+               <h3>contact info</h3>
+               <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
+               <p> <i class="fas fa-phone"></i> +111-222-3333 </p>
+               <p> <i class="fas fa-envelope"></i> shaikhanas@gmail.com </p>
+               <p> <i class="fas fa-map-marker-alt"></i> mumbai, india - 400104 </p>
+            </div>
+
+            <div class="box">
+               <h3>follow us</h3>
+               <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+               <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+               <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+               <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+            </div>
+
+         </div>
+
+         <p class="credit"> &copy; copyright @ by <span>Group 13</span> </p>
+
+      </section>
+   </body>
+
+</html>
