@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "image": "images/be_well_bee.jpg",
+        "name": "Be Well Bee",
+        "price": 20,
+        "quantity": 2
+    },
+    {
+        "id": 2,
+        "image": "images/darknet.jpg",
+        "name": "Darknet",
+        "price": 3030,
+        "quantity": 1
+    }
+]
