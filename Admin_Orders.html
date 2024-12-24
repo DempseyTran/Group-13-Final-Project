@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Product</title>
+    <link rel="stylesheet" href="/css/admin_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="flex">
+    
+            <a href="" class="logo">Admin<span>Panel</span></a>
+    
+            <nav class="navbar">
+                <a href="admin_page.html">Home</a>
+                <a href="Admin_Products.html">Products</a>
+                <a href="Admin_Orders.html">Orders</a>
+                <a href="Admin_Users.html">Users</a>
+                <a href="Admin_Message.html">Message</a>
+            </nav>
+    
+            <div class="icons">
+                <div id="menu-btn" class="fa-solid fa-bars"></div>
+                <div id="user-btn" class="fa-solid fa-user"></div>
+            </div>
+    
+            <div class="account-box">
+                <p>Username: <span>...</span></p>
+                <p>Email: <span>...</span></p>
+                <a href="" class="delete-btn">Logout</a>
+            </div>
+    
+        </div>
+    </header>
+
+    <section class="orders">
+
+        <h1 class="title">placed orders</h1>
+     
+        <div class="box-container">
+           
+           <div class="box">
+              <p> User id : <span>001</span> </p>
+              <p> Placed on : <span>21 Febuary</span> </p>
+              <p> Name : <span>User 1</span> </p>
+              <p> Number : <span>0123456</span> </p>
+              <p> Email : <span>user1@gmail.com</span> </p>
+              <p> Address : <span>District A</span> </p>
+              <p> Total products : <span>2</span> </p>
+              <p> Total price : <span>50$</span> </p>
+              <p> Payment method : <span>Cash</span> </p>
+              <form action="" method="post">
+                 <select name="update_payment">
+                    <option value="" selected disabled></option>
+                    <option value="pending">pending</option>
+                    <option value="completed">completed</option>
+                 </select>
+                 <input type="submit" value="update" name="update_order" class="option-btn">
+                 <div onclick="return confirm('delete this order?');" class="delete-btn">delete</div>
+              </form>
+           </div>
+
+           <div class="box">
+            <p> User id : <span>002</span> </p>
+              <p> Placed on : <span>02 March</span> </p>
+              <p> Name : <span>User 2</span> </p>
+              <p> Number : <span>0326541</span> </p>
+              <p> Email : <span>user2@gmail.com</span> </p>
+              <p> Address : <span>District C</span> </p>
+              <p> Total products : <span>5</span> </p>
+              <p> Total price : <span>100$</span> </p>
+              <p> Payment method : <span>Transfer</span> </p>
+            <form action="" method="post">
+               <select name="update_payment">
+                  <option value="" selected disabled></option>
+                  <option value="pending">Pending</option>
+                  <option value="completed">Completed</option>
+               </select>
+               <input type="submit" value="update" name="update_order" class="option-btn">
+            <div onclick="return confirm('delete this order?');" class="delete-btn">Delete</div>
+            </form>
+         </div>
+
+         <div class="box">
+            <p> User id : <span>003</span> </p>
+              <p> Placed on : <span>03 May</span> </p>
+              <p> Name : <span>User 3</span> </p>
+              <p> Number : <span>0216458</span> </p>
+              <p> Email : <span>user3@gmail.com</span> </p>
+              <p> Address : <span>District B</span> </p>
+              <p> Total products : <span>1</span> </p>
+              <p> Total price : <span>20$</span> </p>
+              <p> Payment method : <span>Cash</span> </p>
+            <form action="" method="post">
+               <select name="update_payment">
+                  <option value="" selected disabled></option>
+                  <option value="pending">Pending</option>
+                  <option value="completed">Completed</option>
+               </select>
+               <input type="submit" value="update" name="update_order" class="option-btn">
+            <div onclick="return confirm('delete this order?');" class="delete-btn">Delete</div>
+            </form>
+         </div>
+           
+        </div>
+
+
+    <script src="/js/admin_script.js"></script>
+</body>
+
+</html>
