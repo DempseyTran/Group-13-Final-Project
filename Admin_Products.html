@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Product</title>
+    <link rel="stylesheet" href="Admin_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="flex">
+    
+            <a href="" class="logo">Admin<span>Panel</span></a>
+    
+            <nav class="navbar">
+                <a href="">Home</a>
+                <a href="Admin_Products.html">Products</a>
+                <a href="Admin_Orders.html">Orders</a>
+                <a href="Admin_Users.html">Users</a>
+                <a href="Admin_Message.html">Message</a>
+            </nav>
+    
+            <div class="icons">
+                <div id="menu-btn" class="fa-solid fa-bars"></div>
+                <div id="user-btn" class="fa-solid fa-user"></div>
+            </div>
+    
+            <div class="account-box">
+                <p>Username: <span>...</span></p>
+                <p>Email: <span>...</span></p>
+                <a href="" class="delete-btn">Logout</a>
+            </div>
+    
+        </div>
+    </header>
+
+    <section class="add-products">
+        <h1 class="title">Shop Products</h1>
+        <form action="" method="post" >
+            <h3>Add Product</h3>
+            <input type="text" name="name" class="box" placeholder="Enter Product Name" required>
+            <input type="number" name="price" class="box" placeholder="Enter Product Price" required>
+            <input type="file" accept="image/jpg, image/jpeg, image/png, image/webp" class="box" required>
+            <input type="submit" value="Add Product" name="add_product" class="btn">
+        </form>
+    </section>
+
+    <section class="show-products">
+        <div class="box-container">
+            <div class="box">
+                <img src="/book_cover_1.webp" alt="">
+                <div class="name">Book Name 1</div>
+                <div class="price">20$</div>
+                <input type="submit" value="update" name="update_product" class="btn">
+                <div href="" class="delete-btn" >Delete</div>
+            </div>
+            <div class="box">
+                <img src="/book_cover_2.webp" alt="">
+                <div class="name">Book Name 2</div>
+                <div class="price">25$</div>
+                <input type="submit" value="update" name="update_product" class="btn">
+                <div href="" class="delete-btn" >Delete</div>
+            </div>
+            <div class="box">
+                <img src="/book_cover_3.webp" alt="">
+                <div class="name">Book Name 3</div>
+                <div class="price">18$</div>
+                <input type="submit" value="update" name="update_product" class="btn">
+                <div href="" class="delete-btn" >Delete</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <section class="edit-product-form">
+        <form action="" method="post">
+           <img src="book_cover_1.webp" alt="">
+           <input type="text" name="update_name"  class="box" required placeholder="Enter product name">
+           <input type="number" name="update_price"  min="0" class="box" required placeholder="Enter product price">
+           <input type="file" class="box" name="update_image" accept="image/jpg, image/jpeg, image/png, image/webp">
+           <input type="submit" value="update" name="update_product" class="btn">
+           <input type="reset" value="cancel" id="close-update" class="option-btn">
+        </form>
+        
+     </section>
+ -->
+
+    <script src="admin_script.js"></script>
+</body>
+
+</html>
