@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>cart</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="heading">
+        <h3>shopping cart</h3>
+        <p> <a href="home.php">home</a> / cart </p>
+    </div>
+
+    <section class="shopping-cart">
+        <h1 class="title">Products Added</h1>
+    
+        <div class="box-container" id="cart-container">
+           
+        </div>
+    
+        <div style="margin-top: 2rem; text-align:center;">
+            <button class="delete-btn" id="delete-all" onclick="deleteAllItems()">Delete All</button>
+        </div>
+    
+        <div class="cart-total" id="cart-total">
+            <p>Grand Total: <span>$0/-</span></p>
+            <div class="flex">
+                <a href="shop.html" class="option-btn">Continue Shopping</a>
+                <a href="checkout.html" class="btn disabled">Proceed to Checkout</a>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        const cartContainer = document.getElementById('cart-container');
+        const cartTotalElement = document.getElementById('cart-total');
+        let grandTotal = 0;
+    
+      
+        fetch('cart.json')
+            .then(response => response.json())
+            .then(data => {
+                if (data.length > 0) {
+                    data.forEach(item => {
+                        const subTotal = item.price * item.quantity;
+                        grandTotal += subTotal;
+    
+                        const box = document.createElement('div');
+                        box.className = 'box';
+                        box.innerHTML = `
+                            <a href="javascript:void(0)" class="fas fa-times" onclick="deleteItem(${item.id})">×</a>
+                            <img src="${item.image}" alt="${item.name}">
+                            <div class="name">${item.name}</div>
+                            <div class="price">$${item.price}/-</div>
+                            <form onsubmit="updateQuantity(event, ${item.id})">
+                                <input type="number" min="1" value="${item.quantity}" id="quantity-${item.id}">
+                                <input type="submit" value="Update" class="option-btn">
+                            </form>
+                            <div class="sub-total">Sub Total: <span>$${subTotal}/-</span></div>
+                        `;
+                        cartContainer.appendChild(box);
+                    });
+    
+                    updateGrandTotal();
+                } else {
+                    cartContainer.innerHTML = '<p class="empty">Your cart is empty</p>';
+                }
+            })
+            .catch(error => console.error('Error loading cart data:', error));
+    
+        function updateGrandTotal() {
+            cartTotalElement.querySelector('p span').textContent = `$${grandTotal}/-`;
+            const checkoutBtn = cartTotalElement.querySelector('.btn');
+            checkoutBtn.classList.toggle('disabled', grandTotal <= 0);
+        }
+    
+        function deleteItem(id) {
+            alert(`Delete item with ID: ${id}`);
+        }
+    
+        function updateQuantity(event, id) {
+            event.preventDefault();
+            const quantity = document.getElementById(`quantity-${id}`).value;
+            alert(`Update quantity for item ID: ${id} to ${quantity}`);
+        }
+    
+        function deleteAllItems() {
+            if (confirm('Delete all items from cart?')) {
+                cartContainer.innerHTML = '<p class="empty">Your cart is empty</p>';
+                grandTotal = 0;
+                updateGrandTotal();
+            }
+        }
+    </script>
+    <section class="footer">
+        <div class="box-container">
+           <div class="box">
+              <h3>quick links</h3>
+              <a href="home.html">home</a>
+              <a href="about.html">about</a>
+              <a href="shop.html">shop</a>
+              <a href="contact.html">contact</a>
+           </div>
+     
+           <div class="box">
+              <h3>extra links</h3>
+              <a href="login.html">login</a>
+              <a href="register.html">register</a>
+              <a href="cart.html">cart</a>
+              <a href="orders.html">orders</a>
+           </div>
+     
+           <div class="box">
+              <h3>contact info</h3>
+              <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
+              <p> <i class="fas fa-phone"></i> +111-222-3333 </p>
+              <p> <i class="fas fa-envelope"></i> shaikhanas@gmail.com </p>
+              <p> <i class="fas fa-map-marker-alt"></i> mumbai, india - 400104 </p>
+           </div>
+     
+           <div class="box">
+              <h3>follow us</h3>
+              <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+              <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+              <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+              <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+           </div>
+     
+        </div>
+    </section>
+  
+    <script src="script.js"></script>
+</body>
+</html>
