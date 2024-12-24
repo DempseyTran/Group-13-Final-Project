@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+    <div class="heading">
+        <h3>your orders</h3>
+        <p> <a href="index.html">Home</a> / Orders </p>
+    </div>
+    <section class="placed-orders">
+        <h1 class="title">Placed Orders</h1>
+        <div class="box-container" id="order-container"></div>
+    </section>
+
+    <script>
+        const orderContainer = document.getElementById('order-container');
+
+        fetch('orders.json')
+            .then(response => response.json())
+            .then(data => {
+                if (data.length > 0) {
+                    data.forEach(order => {
+                        const box = document.createElement('div');
+                        box.className = 'box';
+                        box.innerHTML = `
+                            <p>Placed on: <span>${order.placed_on}</span></p>
+                            <p>Name: <span>${order.name}</span></p>
+                            <p>Number: <span>${order.number}</span></p>
+                            <p>Email: <span>${order.email}</span></p>
+                            <p>Address: <span>${order.address}</span></p>
+                            <p>Payment Method: <span>${order.method}</span></p>
+                            <p>Your Orders: <span>${order.total_products}</span></p>
+                            <p>Total Price: <span>$${order.total_price}/-</span></p>
+                            <p>Payment Status: 
+                                <span style="color: ${order.payment_status === 'Pending' ? 'red' : 'green'};">
+                                    ${order.payment_status}
+                                </span>
+                            </p>
+                        `;
+                        orderContainer.appendChild(box);
+                    });
+                } else {
+                    orderContainer.innerHTML = '<p class="empty">No orders placed yet!</p>';
+                }
+            })
+            .catch(error => console.error('Error loading orders:', error));
+    </script>
+
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="shop.html">Shop</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="box">
+                <h3>extra links</h3>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                <a href="cart.html">Cart</a>
+                <a href="orders.html">Orders</a>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
+                <p> <i class="fas fa-phone"></i> +111-222-3333 </p>
+                <p> <i class="fas fa-envelope"></i> shaikhanas@gmail.com </p>
+                <p> <i class="fas fa-map-marker-alt"></i> mumbai, india - 400104 </p>
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+                <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+                <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+            </div>
+
+        </div>
+    </section>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

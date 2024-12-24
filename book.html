@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book category</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="/css/bookcate.css" />
+</head>
+
+<body>
+  <div class="heading">
+    <h3>contact us</h3>
+    <p><a href="/Book-Store/index.html">Home</a> / Books</p>
+  </div>
+  <div class="imghd">
+    <img src="/images/sach.png" alt="anh" />
+  </div>
+  <div class="container">
+    <div class="filter-sidebar">
+      <input type="text" placeholder="Filter by Keyword" class="filter-input" />
+      <div class="filter-category">
+        <div class="filter-header" onclick="toggleFilter('characters')">
+          Quốc Gia <span class="toggle-icon" id="characters-toggle">+</span>
+        </div>
+        <div class="filter-content hidden" id="characters-content">
+          <label><input type="checkbox" value="Việt Nam" /> Việt Nam</label><br />
+          <label><input type="checkbox" value="Trung Quốc" /> Trung Quốc</label><br />
+          <label><input type="checkbox" value="Nhật Bản" /> Nhật Bản</label><br />
+          <label><input type="checkbox" value="Pháp" /> Pháp</label><br />
+          <label><input type="checkbox" value="Đức" /> Đức</label><br />
+          <label><input type="checkbox" value="Hàn Quốc" /> Hàn Quốc</label><br />
+          <label><input type="checkbox" value="Italy" /> Italy</label><br />
+          <label><input type="checkbox" value="Mỹ " /> Mỹ</label><br />
+        </div>
+      </div>
+      <div class="filter-category">
+        <div class="filter-header" onclick="toggleFilter('series')">
+          Thể loại <span class="toggle-icon" id="series-toggle">+</span>
+        </div>
+        <div class="filter-content hidden" id="series-content">
+          <label><input type="checkbox" value="Hư cấu" /> Hư cấu</label><br />
+          <label><input type="checkbox" value="Phi hư cấu" /> Phi hư cấu</label><br />
+          <label><input type="checkbox" value="Thiếu nhi" /> Thiếu nhi</label><br />
+          <label><input type="checkbox" value="Phân loại khác" /> Phân loại
+            khác</label><br />
+        </div>
+      </div>
+    </div>
+    <div class="comics-section">
+      <div class="comics-header">
+        <h2>SÁCH</h2>
+      </div>
+      <div class="comics-grid">
+        <div class="comic" data-name="Việt Nam" data-category="Việt Nam" data-series="Hư cấu">
+          <a href="./details/detailbook1.html"><img src="/images/bash_and_lucy-2.jpg" alt="BASH AND LUCY" /></a>
+          <p><a href="./details/detailbook1.html">BASH AND LUCY</a></p>
+        </div>
+        <div class="comic" data-name="Trung Quốc" data-category="Trung Quốc" data-series="Phi hư cấu">
+          <a href="./details/detailbook2.html"><img src="/images/be_well_bee.jpg" alt="BE WELL BEE" /></a>
+          <p><a href="./details/detailbook2.html">BE WELL BEE</a></p>
+        </div>
+        <div class="comic" data-name="Nhật Bản" data-category="Nhật Bản" data-series="Thiếu nhi">
+          <a href="./details/detailbook3.html"><img src="/images/clever_lands.jpg" alt="CLEVER LANDS" /></a>
+          <p><a href="./details/detailbook3.html">CLEVER LANDS</a></p>
+        </div>
+        <div class="comic" data-name="Pháp" data-category="Pháp" data-series="Phi hư cấu">
+          <a href="./details/detailbook4.html"><img src="/images/darknet.jpg" alt="DARK NET" /></a>
+          <p><a href="./details/detailbook4.html">DARK NET</a></p>
+        </div>
+        <div class="comic" data-name="Hàn Quốc" data-category="Hàn Quốc" data-series="Thiếu nhi">
+          <a href="./details/detailbook5.html"><img src="/images/economic.jpg" alt="Economic" /></a>
+          <p><a href="./details/detailbook5.html">ECONOMIC</a></p>
+        </div>
+        <div class="comic" data-name="Đức" data-category="Đức" data-series="Hư cấu">
+          <a href="./details/detailbook6.html"><img src="/images/shattered.jpg" alt="SHATTERED" /></a>
+          <p><a href="./details/detailbook6.html">SHATTERED</a></p>
+        </div>
+        <div class="comic" data-name="Mỹ " data-category="Mỹ " data-series="Hư cấu">
+          <a href="./details/detailbook7.html"><img src="/images/the_happy_lemon.jpg" alt="The happy lemon" /></a>
+          <p><a href="./details/detailbook7.html">THE HAPPY LEMON</a></p>
+        </div>
+        <div class="comic" data-name="Italy" data-category="Italy" data-series="Phi hư cấu">
+          <a href="./details/detailbook8.html"><img src="/images/the_world.jpg" alt="The world" /></a>
+          <p><a href="/details/detailbook8.html">THE WORD</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="bookcate.js"></script>
+</body>
+
+</html>

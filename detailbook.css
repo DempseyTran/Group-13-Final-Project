@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.comic-container {
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.comic-details {
+  display: flex;
+  gap: 20px;
+}
+
+.comic-image img {
+  max-width: 800px;
+}
+
+.comic-info {
+  flex-grow: 1;
+}
+
+.comic-info h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.comic-info p {
+  margin: 5px 0;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.variant-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.variant-link:hover {
+  text-decoration: underline;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+}
+.product-card h1 {
+  font-size: 20px;
+  margin: 0 0 10px;
+  color: #333;
+}
+.product-card .author {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+.product-card .price {
+  font-size: 24px;
+  color: #28a745;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.product-card .original-price {
+  font-size: 16px;
+  color: #999;
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+.product-card .discount {
+  color: #d9534f;
+  font-size: 14px;
+}
+.product-card .quantity {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.product-card .quantity button {
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.product-card .quantity span {
+  margin: 0 10px;
+  font-size: 16px;
+}
+.product-card .buttons {
+  display: flex;
+  gap: 10px;
+}
+.product-card .buttons button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.product-card .buttons .add-to-cart {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  color: #333;
+}
+.product-card .buttons .buy-now {
+  background: #8e44ad;
+  color: #fff;
+}
+.product-card .marketplaces {
+  margin-top: 20px;
+}
+.product-card .marketplaces img {
+  width: 24px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.suggestion-container {
+  padding: 20px;
+}
+
+.suggestion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #00923f;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.suggestion-header h2 {
+  color: #00923f;
+  font-size: 20px;
+  margin: 0;
+}
+
+.suggestion-header a {
+  color: #00923f;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.book-list {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+}
+
+.book-item {
+  text-align: center;
+  width: 150px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.book-item:hover {
+  transform: scale(1.1);
+}
+
+.book-item img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.book-item .title {
+  font-size: 14px;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.book-item .price {
+  color: #00923f;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.book-item .old-price {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 12px;
+}

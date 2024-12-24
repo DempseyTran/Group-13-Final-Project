@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Be Well Bee",
+        "price": 20,
+        "image": "images/be_well_bee.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Darknet",
+        "price": 30,
+        "image": "images/darknet.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Freefall",
+        "price": 40,
+        "image": "images/freefall.jpg"
+    }
+    
+]
+

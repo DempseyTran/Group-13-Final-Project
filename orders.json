@@ -1,0 +1,24 @@
+[
+    {
+        "placed_on": "2024-12-01",
+        "name": "John Doe",
+        "number": "1234567890",
+        "email": "johndoe@example.com",
+        "address": "123 Main Street, City, Country",
+        "method": "Credit Card",
+        "total_products": "3 items",
+        "total_price": 100,
+        "payment_status": "Completed"
+    },
+    {
+        "placed_on": "2024-12-02",
+        "name": "Jane Smith",
+        "number": "0987654321",
+        "email": "janesmith@example.com",
+        "address": "456 Elm Street, City, Country",
+        "method": "PayPal",
+        "total_products": "5 items",
+        "total_price": 200,
+        "payment_status": "Pending"
+    }
+]
