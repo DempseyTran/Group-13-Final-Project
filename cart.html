@@ -35,7 +35,7 @@
         <div class="cart-total" id="cart-total">
             <p>Grand Total: <span>$0/-</span></p>
             <div class="flex">
-                <a href="shop.html" class="option-btn">Continue Shopping</a>
+                <a href="/book.html" class="option-btn">Continue Shopping</a>
                 <a href="checkout.html" class="btn disabled">Proceed to Checkout</a>
             </div>
         </div>
@@ -58,7 +58,7 @@
                         const box = document.createElement('div');
                         box.className = 'box';
                         box.innerHTML = `
-                            <a href="javascript:void(0)" class="fas fa-times" onclick="deleteItem(${item.id})">×</a>
+                            <a href="javascript:void(0)" class="fas fa-times" onclick="deleteItem(${item.id})"></a>
                             <img src="${item.image}" alt="${item.name}">
                             <div class="name">${item.name}</div>
                             <div class="price">$${item.price}/-</div>
